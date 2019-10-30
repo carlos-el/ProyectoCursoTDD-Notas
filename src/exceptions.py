@@ -1,14 +1,21 @@
-class Error(Exception):
+class NotaError(Exception):
+    """Excepcion para una nota mayor que 10 o menor que 0."""
     pass
 
-class NotaError(Error):
-    """Excepcion para una nota mayor que 10 o menor que 0.
+class ComentarioNoneError(Error):
+    """Excepcion para un comentario de valor None."""
+    pass
 
-    Atributos:
-        nota -- nota de entrada que ha producido el error.
-        message -- explicacion del error
+class ComentarioEmptyError(Error):
+    """Excepcion para un comentario vacio."""
+    pass
 
-    """
-    def __init__(self, nota, message):
-        self.nota = nota
-        self.message = message
+class AlumnoNoneError(Error):
+    """Excepcion para un Alumno de valor None."""
+    pass
+
+class AlumnoEmptyError(Error):
+    """Excepcion para un Alumno vacio."""
+    pass
+
+

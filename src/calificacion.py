@@ -1,5 +1,5 @@
 
-from exceptions import NotaError
+from exceptions import *
 
 class calificacion:
     def __init__(self, alumno, nota, comentario):
@@ -8,11 +8,16 @@ class calificacion:
         self.__alumno = alumno ##comprobacion no nulo y no vacio
 
     def calificar(self, nota, comentario):
-        if nota not in [0, 10]:
-            raise NotaError(nota, "Nota no esta entre 0 y 10")
+        if nota >= 0 and nota <= 10:
+            raise NotaError("Argumento 'nota' tiene que estar entre 0 y 10")
+
+        if comentario is None:
+            raise ComentarioNoneError("Argumento 'comentario' no puede ser None")
+        if comentario is '':
+            raise ComentarioNoneError("Argumento 'comentario' no puede ser una cadena vacia")
 
         self.__nota = nota
-        self.__comentario = comentario ##comprobacion no nulo y no vacio
+        self.__comentario = comentario 
 
     def add_anotacion(self, anotacion):
         self.__anotaciones.append(anotacion)

@@ -104,3 +104,9 @@ venv.bak/
 .mypy_cache/
 
 *~
+
+# venv generated files
+bin/
+share/
+lib64
+pyvenv.cfg

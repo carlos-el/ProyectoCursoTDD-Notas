@@ -1,14 +1,13 @@
+from calificacion.exceptions import *
 
-from exceptions import *
-
-class calificacion:
+class Calificacion:
     def __init__(self, alumno, nota, comentario):
         self.calificar(nota, comentario)
         self.__anotaciones = []
 
         if alumno is None:
             raise AlumnoNoneException("Argumento 'alumno' no puede ser None")
-        if alumno is '':
+        if not alumno:
             raise AlumnoEmptyException("Argumento 'alumno' no puede ser una cadena vacía")
 
         self.__alumno = alumno ##comprobacion no nulo y no vacio
@@ -19,7 +18,7 @@ class calificacion:
 
         if comentario is None:
             raise ComentarioNoneException("Argumento 'comentario' no puede ser None")
-        if comentario is '':
+        if not comentario:
             raise ComentarioEmptyException("Argumento 'comentario' no puede ser una cadena vacia")
 
         self.__nota = nota

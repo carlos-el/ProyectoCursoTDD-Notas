@@ -1,21 +1,19 @@
-class NotaError(Exception):
+class NotaException(Exception):
     """Excepcion para una nota mayor que 10 o menor que 0."""
     pass
 
-class ComentarioNoneError(Error):
+class ComentarioNoneException(Exception):
     """Excepcion para un comentario de valor None."""
     pass
 
-class ComentarioEmptyError(Error):
+class ComentarioEmptyException(Exception):
     """Excepcion para un comentario vacio."""
     pass
 
-class AlumnoNoneError(Error):
+class AlumnoNoneException(Exception):
     """Excepcion para un Alumno de valor None."""
     pass
 
-class AlumnoEmptyError(Error):
+class AlumnoEmptyException(Exception):
     """Excepcion para un Alumno vacio."""
     pass
-
-

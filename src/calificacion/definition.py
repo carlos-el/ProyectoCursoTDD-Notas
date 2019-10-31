@@ -13,7 +13,7 @@ class Calificacion:
         self.__alumno = alumno ##comprobacion no nulo y no vacio
 
     def calificar(self, nota, comentario):
-        if nota >= 0 and nota <= 10:
+        if nota < 0 and nota > 10:
             raise NotaException("Argumento 'nota' tiene que estar entre 0 y 10")
 
         if comentario is None:

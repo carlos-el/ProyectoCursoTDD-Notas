@@ -25,4 +25,9 @@ class Calificacion:
         self.__comentario = comentario
 
     def add_anotacion(self, anotacion):
+        if anotacion is None:
+            raise AnotacionNoneException("Argumento 'anotacion' no puede ser None")
+        if anotacion is '':
+            raise AnotacionEmptyException("Argumento 'anotacion' no puede ser una cadena vacia")
+
         self.__anotaciones.append(anotacion)

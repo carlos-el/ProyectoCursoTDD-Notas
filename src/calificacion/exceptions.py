@@ -17,3 +17,11 @@ class AlumnoNoneException(Exception):
 class AlumnoEmptyException(Exception):
     """Excepcion para un Alumno vacio."""
     pass
+
+class AnotacionNoneException(Exception):
+    """Excepcion para una anotacion vacia."""
+    pass
+
+class AnotacionEmptyException(Exception):
+    """Excepcion para una anotacion vacia."""
+    pass

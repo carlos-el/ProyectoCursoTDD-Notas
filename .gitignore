@@ -110,3 +110,4 @@ bin/
 share/
 lib64
 pyvenv.cfg
+env-notas/

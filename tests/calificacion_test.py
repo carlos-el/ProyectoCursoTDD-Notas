@@ -27,3 +27,11 @@ def test_comentario_none():
 def test_comentario_empty():
     with pytest.raises(ComentarioEmptyException):
         _ = Calificacion("Alumno", 6, "")
+
+def test_anotacion_none():
+    with pytest.raises(AnotacionNoneException):
+        _ = Calificacion("Alumno", 6, "Comentario de prueba").add_anotacion(None)
+
+def test_anotacion_empty():
+    with pytest.raises(AnotacionEmptyException):
+        _ = Calificacion("Alumno", 6, "Comentario de prueba").add_anotacion('')

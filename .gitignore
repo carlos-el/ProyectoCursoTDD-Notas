@@ -111,3 +111,6 @@ share/
 lib64
 pyvenv.cfg
 env-notas/
+
+# vscode generated files
+.vscode/

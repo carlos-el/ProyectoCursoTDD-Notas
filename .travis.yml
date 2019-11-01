@@ -9,4 +9,5 @@ install:
   - pip3 install -r requirements.txt
 
 script:
-  - pytest
+  - invoke test
+  - invoke build

@@ -1,3 +1,13 @@
-language: minimal
+language: python
 
-script: /bin/true
+python:
+  - "2.7"
+  - "3.5"
+  - "3.7"
+  - "nightly"
+
+install:
+  - pip3 install -r requirements.txt
+
+script:
+  - pytest

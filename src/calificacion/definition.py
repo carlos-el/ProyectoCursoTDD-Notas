@@ -1,33 +1,34 @@
-from calificacion.exceptions import *
-
 class Calificacion:
     def __init__(self, alumno, nota, comentario):
         self.calificar(nota, comentario)
         self.__anotaciones = []
 
         if alumno is None:
-            raise AlumnoNoneException("Argumento 'alumno' no puede ser None")
+            raise AttributeError("Argumento 'alumno' no puede ser None")
         if not alumno:
-            raise AlumnoEmptyException("Argumento 'alumno' no puede ser una cadena vacía")
+            raise ValueError("Argumento 'alumno' no puede ser una cadena vacía")
 
-        self.__alumno = alumno ##comprobacion no nulo y no vacio
+        self.__alumno = alumno
 
     def calificar(self, nota, comentario):
         if nota < 0 or nota > 10:
-            raise NotaException("Argumento 'nota' tiene que estar entre 0 y 10")
+            raise ValueError("Argumento 'nota' tiene que estar entre 0 y 10")
 
         if comentario is None:
-            raise ComentarioNoneException("Argumento 'comentario' no puede ser None")
+            raise AttributeError("Argumento 'comentario' no puede ser None")
         if not comentario:
-            raise ComentarioEmptyException("Argumento 'comentario' no puede ser una cadena vacia")
+            raise ValueError("Argumento 'comentario' no puede ser una cadena vacia")
 
         self.__nota = nota
         self.__comentario = comentario
 
     def add_anotacion(self, anotacion):
         if anotacion is None:
-            raise AnotacionNoneException("Argumento 'anotacion' no puede ser None")
+            raise AttributeError("Argumento 'anotacion' no puede ser None")
         if anotacion is '':
-            raise AnotacionEmptyException("Argumento 'anotacion' no puede ser una cadena vacia")
+            raise ValueError("Argumento 'anotacion' no puede ser una cadena vacia")
 
         self.__anotaciones.append(anotacion)
+
+    def get_alumno(self):
+        return self.__alumno

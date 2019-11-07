@@ -16,7 +16,7 @@ class Practica:
             raise AttributeError("No es un string")
 
         for c in self.__calificaciones:
-            if c.get_alumno == alumno:
+            if c.get_alumno() == alumno:
                 return c
         
         raise ItemNotFound("No hay una calificación para el alumno")
@@ -38,7 +38,7 @@ class Practica:
             raise AttributeError("No es un string")
 
         for c in self.__calificaciones:
-            if c.get_alumno == alumno:
+            if c.get_alumno() == alumno:
                 c.add_anotacion(anotacion)
                 return
 

@@ -32,3 +32,12 @@ class Calificacion:
 
     def get_alumno(self):
         return self.__alumno
+
+    def get_nota(self):
+        return self.__nota
+
+    def get_comentario(self):
+        return self.__comentario
+
+    def get_anotaciones(self):
+        return self.__anotaciones

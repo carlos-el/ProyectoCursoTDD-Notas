@@ -6,4 +6,5 @@ def test(c):
 
 @task
 def coverage(c):
+    c.run("coverage xml")
     c.run("codecov -t")

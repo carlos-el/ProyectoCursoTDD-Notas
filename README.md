@@ -1,5 +1,8 @@
 # Gestor de notas
 
+[![Build Status](https://travis-ci.com/carlos-el/ProyectoCursoTDD-Notas.svg?branch=master)](https://travis-ci.com/carlos-el/ProyectoCursoTDD-Notas)
+[![Code coverage](https://codecov.io/gh/carlos-el/ProyectoCursoTDD-Notas/branch/master/graphs/badge.svg)](https://codecov.io/gh/carlos-el/ProyectoCursoTDD-Notas/branch/master)
+
 Proyecto realizado por:
 
 - Carlos Enriquez Lopez

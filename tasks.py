@@ -6,4 +6,4 @@ def test(c):
 
 @task
 def coverage(c):
-    print("codecov -t")
+    c.run("codecov -t")

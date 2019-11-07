@@ -10,4 +10,6 @@ install:
 
 script:
   - invoke test
-  - invoke build
+
+after_success:
+  - invoke coverage

@@ -2,8 +2,8 @@ from invoke import task
 
 @task
 def test(c):
-    c.run("py.test")
+    c.run("coverage run --source src -m py.test")
 
 @task
-def build(c):
-    print("Building")
+def coverage(c):
+    print("codecov -t")
